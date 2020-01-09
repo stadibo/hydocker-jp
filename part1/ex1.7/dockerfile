@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+
+WORKDIR /usr/app
+RUN apt-get update && apt-get install -y curl
+COPY curling.sh .
+RUN chmod +x ./curling.sh
+
+ENTRYPOINT [ "./curling.sh" ]
