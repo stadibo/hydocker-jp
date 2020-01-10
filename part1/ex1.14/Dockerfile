@@ -7,8 +7,7 @@ WORKDIR /usr/src/app
 
 RUN bundle install
 
-RUN rails db:migrate RAILS_ENV=production
-RUN rake assets:precompile
+RUN rails db:migrate
 
 EXPOSE 3000
-CMD ["rails", "s -e production"]
+CMD ["rails", "s"]
