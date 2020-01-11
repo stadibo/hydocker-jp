@@ -30,3 +30,9 @@ cd frontend
 npm install
 npm start
 ```
+
+### Alt start for running local files inside the container
+
+```
+docker run -it -v $(pwd)/data:/usr/src/app/data --name skeleton peterzon/mern-skeleton
+```
