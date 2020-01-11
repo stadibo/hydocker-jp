@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  frontend:
+    image: kurkkumopo-frontend
+    build: ./ml-kurkkumopo-frontend
+    container_name: km-frontend
+    ports:
+      - 3000:3000
+  backend:
+    image: kurkkumopo-backend
+    build: ./ml-kurkkumopo-backend
+    container_name: km-backend
+    ports:
+      - 5000:5000
+    volumes:
+      - model:/src/model
+  training:
+    image: kurkkumopo-training
+    build: ./ml-kurkkumopo-training
+    container_name: km-training
+    volumes:
+      - images:/src/imgs
+      - model:/src/model
+
+volumes:
+  images:
+  model:
