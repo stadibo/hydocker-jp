@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+  frontend:
+    image: frontend-example
+    build: ./frontend
+    environment: 
+      - API_URL=http://localhost:8000
+    ports: 
+      - 5000:5000
+  backend:
+    image: backend-example
+    build: ./backend
+    depends_on:
+      - redis
+    links:
+      - redis
+    environment:
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+    ports:
+      - 8000:8000
