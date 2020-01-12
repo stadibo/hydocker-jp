@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis
+    container_name: cache
+  db:
+    image: postgres
+    container_name: database
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+  frontend:
+    image: frontend-example
+    build: ./frontend
+    environment: 
+      - API_URL=http://localhost:8080/api
+  backend:
+    image: backend-example
+    build: ./backend
+    depends_on:
+      - redis
+      - db
+    links:
+      - redis
+    environment:
+      - FRONT_URL=http://localhost:5000
+      - REDIS=redis
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_HOST=db
+  proxy:
+    image: nginx
+    volumes: 
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - frontend
+      - backend
+    ports:
+      - 8080:80
