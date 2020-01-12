@@ -14,7 +14,7 @@ services:
     image: frontend-example
     build: ./frontend
     environment: 
-      - API_URL=http://localhost:8080/api
+      - API_URL=http://localhost/api
   backend:
     image: backend-example
     build: ./backend
@@ -37,4 +37,4 @@ services:
       - frontend
       - backend
     ports:
-      - 8080:80
+      - 80:80
