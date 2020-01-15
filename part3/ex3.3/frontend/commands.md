@@ -1,0 +1,4 @@
+```
+docker build -t frontend-example .
+docker run -d --rm -p 5000:5000 frontend-example
+```
