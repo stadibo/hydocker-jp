@@ -34,3 +34,19 @@ My submissions for https://devopswithdocker.com/
 - [E8-files](https://github.com/stadibo/hydocker-jp/tree/master/part2/ex2.8)
 - [E9-files](https://github.com/stadibo/hydocker-jp/tree/master/part2/ex2.9)
 - [E10-files](https://github.com/stadibo/hydocker-jp/tree/master/part2/ex2.10)
+
+## Part 3
+
+- [E1-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.1)
+- [E2-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.2)
+- [E3-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.3)
+- [E4-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.4)
+- [E5-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.5)
+- [E6-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.6)
+- [E7-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.7)
+
+
+
+
+
+
