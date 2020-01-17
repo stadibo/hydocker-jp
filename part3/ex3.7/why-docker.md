@@ -10,7 +10,7 @@ Another great use for Docker is quickly setting up a basic application. For stan
 
 Having the exact specifications of the environment for an application stored in a Dockerfile and an image on Docker Hub also means that the application environment is well documented and can be easily transferred from one system to another. Dependencies are contained and do not affect the environment of the computer or other containers. Therefore, when, for example, running a website each component can be separated into a container without needing to worry about conflicting dependencies between components.
 
-Continuous integration pipelines, such as Travis, Circle CI, and Jenkins, can make great use Docker. When a new version needs to be deployed it can be saved as a Docker image tagged with the version number and pushed to Docker Hub, from where it can be pulled by integration tools for building a, for example, a staging or production deployment.
+Continuous integration pipelines, such as Travis, Circle CI, and Jenkins, can make great use Docker. When a new version needs to be deployed it can be saved as a Docker image, tagged with the version number and pushed to Docker Hub, from where it can be pulled by integration tools for building a, for example, a staging or production deployment.
 
 ## Example
 
@@ -18,8 +18,8 @@ Here is a website example using a LAMP (Linux, Apache/Nginx, MySQL, PHP/Perl/Pyt
 
 Without Docker the host needs to be running Linux and have the correct version of Python  installed. Then it needs to have MySQL-server installed, as well as a version of Nginx. Nginx need a configuration for how it routes traffic to the Python server. Environment visual:
 
-<insert image here>
+![Without Docker example](./no-docker.png)
 
 With Docker the Dockerfiles would define the environments for each part of the website. The Python server would be in its own container with the correct version of python and its dependencies. The MySQL-server would also be in its own container with a mounted volume. Lastly the Nginx reverse proxy would be setup in its own container. Environment visual:
 
-<insert image here>
+![With Docker example](./with-docker.png)
