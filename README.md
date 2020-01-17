@@ -43,7 +43,7 @@ My submissions for https://devopswithdocker.com/
 - [E4-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.4)
 - [E5-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.5)
 - [E6-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.6)
-- [E7-files](https://github.com/stadibo/hydocker-jp/tree/master/part3/ex3.7)
+- [E7-files](https://github.com/stadibo/hydocker-jp/blob/master/part3/ex3.7/why-docker.md)
 
 
 
