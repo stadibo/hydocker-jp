@@ -9,6 +9,8 @@ back-example-after                       latest              3c790c6d21c7       
 back-example-before                      latest              e8a2557d6091        32 minutes ago       360MB
 ```
 
+Old Dockerfiles in the folder /old
+
 ### FRONTEND
 
 ```docker
